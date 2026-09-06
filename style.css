@@ -1,0 +1,1623 @@
+/* =========================================================
+   MM. HARDOMOTORS
+   PREMIUM STYLE — VERSION 2
+   ========================================================= */
+:root {
+    --primary: #111827;
+    --primary-light: #1f2937;
+
+    --accent: #2563eb;
+    --accent-light: #60a5fa;
+
+    --white: #ffffff;
+    --background: #f3f4f6;
+
+    --text: #111827;
+    --muted: #6b7280;
+
+    --border: #e5e7eb;
+
+    --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+    --shadow-hover: 0 18px 40px rgba(17, 24, 39, 0.14);
+
+    --radius: 14px;
+}
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 28px 20px 20px;
+    border-bottom: 3px solid var(--gold);
+}
+
+.logo h1 {
+    font-size: 31px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo p {
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    margin-top: 22px;
+}
+
+nav a {
+    color: #e9eef5;
+    padding: 9px 13px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+nav a:hover {
+    background: var(--gold);
+    color: var(--navy);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+section {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 90px 25px;
+}
+
+section h2 {
+    position: relative;
+
+    text-align: center;
+
+    color: var(--navy);
+
+    font-size: 38px;
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    background: var(--gold);
+
+    margin: 14px auto 0;
+
+    border-radius: 20px;
+}
+
+section > p {
+    max-width: 760px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+
+    color: var(--muted);
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    max-width: none;
+
+    min-height: 650px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 25px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(201, 162, 39, 0.14),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #071426,
+            #10233d
+        );
+
+    color: var(--white);
+
+    border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+}
+
+.hero p:first-child {
+    color: var(--gold-light);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    color: var(--white);
+
+    font-size: clamp(38px, 7vw, 64px);
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+.hero h2::after {
+    display: none;
+}
+
+.hero h3 {
+    color: var(--gold-light);
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    margin-bottom: 22px;
+}
+
+.hero p {
+    max-width: 720px;
+
+    color: #dbe3ed;
+
+    font-size: 18px;
+
+    margin-bottom: 13px;
+}
+
+.hero strong {
+    color: var(--white);
+}
+
+
+/* =========================================================
+   BUTTON SYSTEM
+   ========================================================= */
+
+.category-button,
+.view-details,
+button {
+    display: inline-block;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 13px 24px;
+
+    background: var(--gold);
+    color: var(--navy);
+
+    font-size: 15px;
+    font-weight: 800;
+
+    margin: 7px 4px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.category-button:hover,
+.view-details:hover,
+button:hover {
+    background: var(--gold-light);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(7, 20, 38, 0.16);
+}
+
+
+/* =========================================================
+   BUSINESS CATEGORIES
+   ========================================================= */
+
+#categories {
+    background: var(--background);
+}
+
+.category-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 45px;
+}
+
+.category-card {
+    position: relative;
+
+    background: var(--white);
+
+    padding: 35px 25px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.category-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 25%;
+
+    width: 50%;
+    height: 3px;
+
+    background: var(--gold);
+
+    border-radius: 0 0 10px 10px;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.category-card h3 {
+    color: var(--navy);
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: var(--muted);
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   LOCATION FILTER
+   ========================================================= */
+
+.location-filter {
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.location-filter label {
+    color: var(--navy);
+
+    font-weight: 800;
+}
+
+.location-filter select {
+    min-width: 200px;
+
+    padding: 12px 15px;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    border: 1px solid #cbd3de;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.location-filter select:focus {
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 3px rgba(201, 162, 39, 0.12);
+}
+
+
+/* =========================================================
+   LOCATION INFORMATION
+   ========================================================= */
+
+.location-info {
+    max-width: 850px;
+
+    margin: 30px auto;
+
+    padding: 40px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy-light)
+        );
+
+    color: var(--white);
+
+    text-align: center;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.location-info h3 {
+    font-size: 26px;
+
+    margin-bottom: 10px;
+}
+
+.location-info p {
+    color: #d3dbe6;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   PROPERTIES
+   ========================================================= */
+
+#properties {
+    text-align: center;
+}
+
+.property-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 720px;
+
+    margin: 22px auto;
+
+    padding: 32px 28px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.property-card h3 {
+    color: var(--navy);
+
+    font-size: 24px;
+
+    margin-bottom: 13px;
+}
+
+.property-card p {
+    color: var(--muted);
+
+    margin: 7px 0;
+}
+
+.property-card p:nth-of-type(2) {
+    color: var(--navy);
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CAR SWAP
+   ========================================================= */
+
+#car-swap {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f0f3f7
+        );
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+#car-swap h2 {
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   CARS
+   ========================================================= */
+
+#cars {
+    text-align: center;
+}
+
+.car-container,
+.cars-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+.car-card {
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.car-card img {
+    width: 100%;
+
+    height: 225px;
+
+    object-fit: cover;
+}
+
+.car-card h3 {
+    color: var(--navy);
+
+    font-size: 22px;
+
+    margin: 20px 15px 8px;
+}
+
+.car-card p {
+    color: var(--muted);
+
+    margin: 5px 15px;
+}
+
+
+/* =========================================================
+   HOUSES
+   ========================================================= */
+
+#houses {
+    text-align: center;
+}
+
+.house-container,
+.houses-container {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.house-card {
+    width: 100%;
+
+    max-width: 680px;
+
+    padding: 35px 28px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.house-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.house-card h3 {
+    color: var(--navy);
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.house-card p {
+    color: var(--muted);
+
+    margin: 6px 0;
+}
+
+
+/* =========================================================
+   BUILDINGS
+   ========================================================= */
+
+#buildings {
+    text-align: center;
+}
+
+.buildings-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.building-card {
+    background: var(--white);
+
+    padding: 32px 25px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s ease;
+}
+
+.building-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.building-card h3 {
+    color: var(--navy);
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+.building-card p {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   PLAZAS
+   ========================================================= */
+
+#plazas {
+    text-align: center;
+}
+
+
+/* =========================================================
+   FILLING STATIONS
+   ========================================================= */
+
+#filling-stations {
+    text-align: center;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+#contact {
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 720px;
+
+    margin: 35px auto 0;
+
+    padding: 42px 30px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+}
+
+.contact-box h3 {
+    color: var(--navy);
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    color: var(--muted);
+
+    margin: 10px 0;
+}
+
+.contact-box strong {
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: var(--navy);
+
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    border-top: 3px solid var(--gold);
+}
+
+footer h3 {
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #cbd5e1;
+
+    margin: 6px 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .category-container,
+    .car-container,
+    .cars-container,
+    .buildings-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 23px 12px 17px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .logo p {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        margin-top: 17px;
+        gap: 3px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 7px 8px;
+    }
+
+    section {
+        padding: 65px 16px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    section > p {
+        font-size: 16px;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 80px 18px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero h3 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .category-container,
+    .car-container,
+    .cars-container,
+    .buildings-container {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card,
+    .property-card,
+    .house-card,
+    .building-card {
+        width: 100%;
+    }
+
+    .location-info {
+        padding: 32px 18px;
+    }
+
+    .contact-box {
+        padding: 32px 18px;
+    }
+
+    .contact-box button,
+    .contact-box .category-button {
+        display: block;
+
+        width: 90%;
+
+        margin: 8px auto;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .logo h1 {
+        font-size: 21px;
+    }
+
+    nav a {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .hero h2 {
+        font-size: 31px;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+}
+/* =====================================================
+   HOUSE SECTION - FORCE CENTER
+===================================================== */
+
+#houses {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#houses h2,
+#houses > p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#houses .house-container,
+#houses .houses-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#houses .house-card {
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+/* PROPERTY CARDS - CENTER */
+
+#properties {
+    text-align: center;
+}
+
+#properties .property-card {
+    width: 100%;
+    max-width: 700px;
+    margin: 25px auto;
+    text-align: center;
+}
+/* =========================================
+   FIX HOUSES SECTION - CENTER EVERYTHING
+========================================= */
+
+#houses {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#houses h2 {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#houses > p {
+    width: 100%;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#houses .house-container,
+#houses .houses-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#houses .house-card {
+    width: 100%;
+    max-width: 680px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#houses .house-card h3,
+#houses .house-card p {
+    text-align: center;
+}
+
+#houses .house-card .view-house {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+}
+/* =========================================
+   HOUSE DETAILS PAGE
+   ========================================= */
+
+section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+section h2 {
+    text-align: center;
+    color: #071426;
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+/* HOUSE DETAIL CARD */
+
+.card {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto 30px;
+
+    padding: 35px 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e9ef;
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 12px 35px rgba(7, 20, 38, 0.09);
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(7, 20, 38, 0.14);
+}
+
+/* HOUSE IMAGE / ICON */
+
+.listing-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 180px;
+
+    font-size: 75px;
+
+    text-align: center;
+}
+
+/* CARD TITLE */
+
+.card h3 {
+    color: #071426;
+    font-size: 27px;
+    margin: 15px 0;
+}
+
+/* CARD INFORMATION */
+
+.card p {
+    color: #687386;
+    font-size: 18px;
+    margin: 9px 0;
+    text-align: center;
+}
+
+/* CARD BUTTON */
+
+.card a,
+.card button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 14px 28px;
+
+    background: #c9a227;
+    color: #071426;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: 800;
+    font-size: 16px;
+
+    transition: 0.25s ease;
+}
+
+.card a:hover,
+.card button:hover {
+    background: #e2c45c;
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 55px 15px;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+    .card {
+        max-width: 500px;
+        padding: 30px 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .listing-image {
+        height: 150px;
+        font-size: 65px;
+    }
+
+    .card h3 {
+        font-size: 24px;
+    }
+
+    .card p {
+        font-size: 17px;
+    }
+}
+/* =====================================================
+   PREMIUM HEADER & HERO
+   MM. HARDOMOTORS
+===================================================== */
+
+/* HEADER */
+header {
+    background: #071426;
+    color: #fff;
+    padding: 28px 20px 18px;
+    text-align: center;
+    border-bottom: 2px solid #c9a227;
+}
+
+/* LOGO */
+.logo h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.logo p {
+    color: #d9b83f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 22px;
+}
+
+nav a {
+    color: #e8edf5;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    background: #c9a227;
+    color: #071426;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    max-width: none;
+
+    min-height: 600px;
+
+    padding: 90px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(201, 162, 39, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #071426 0%,
+            #0d2038 55%,
+            #142b42 100%
+        );
+
+    color: white;
+}
+
+
+/* WELCOME */
+.hero p:first-child {
+    color: #d9b83f;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 18px;
+}
+
+
+/* MAIN TITLE */
+.hero h2 {
+    color: #ffffff;
+
+    font-size: clamp(40px, 8vw, 68px);
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+
+/* SUBTITLE */
+.hero h3 {
+    color: #d9b83f;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    margin-bottom: 28px;
+}
+
+
+/* DESCRIPTION */
+.hero p {
+    max-width: 720px;
+
+    color: #dce4ee;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* LOCATION */
+.hero strong {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero .category-button {
+    min-width: 190px;
+
+    margin: 18px 6px 0;
+
+    padding: 14px 25px;
+
+    background: #c9a227;
+    color: #071426;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    transition: all 0.25s ease;
+}
+
+.hero .category-button:hover {
+    background: #e1c65b;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   DESKTOP BUTTON ARRANGEMENT
+===================================================== */
+
+@media (min-width: 601px) {
+
+    .hero .category-button {
+        display: inline-block;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 22px 12px 15px;
+    }
+
+    .logo h1 {
+        font-size: 23px;
+        letter-spacing: 1.5px;
+    }
+
+    .logo p {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        margin-top: 17px;
+        gap: 3px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 7px 8px;
+    }
+
+    .hero {
+        min-height: 590px;
+        padding: 70px 18px;
+    }
+
+    .hero p:first-child {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .hero h2 {
+        font-size: 35px;
+        line-height: 1.15;
+    }
+
+    .hero h3 {
+        font-size: 20px;
+        margin-bottom: 22px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .hero .category-button {
+        display: block;
+
+        width: 220px;
+
+        margin: 12px auto;
+
+        padding: 13px 20px;
+    }
+}
+/* =====================================================
+   MODERN CORPORATE COLOR OVERRIDE
+===================================================== */
+
+header {
+    background: #111827;
+    border-bottom: 2px solid #2563eb;
+}
+
+.logo p {
+    color: #60a5fa;
+}
+
+nav {
+    background: #111827;
+}
+
+nav a:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(37, 99, 235, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #111827,
+            #1f2937
+        );
+}
+
+.hero p:first-child {
+    color: #60a5fa;
+}
+
+.hero h3 {
+    color: #60a5fa;
+}
+
+.hero .category-button,
+.category-button,
+.view-details,
+button {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.hero .category-button:hover,
+.category-button:hover,
+.view-details:hover,
+button:hover {
+    background: #1d4ed8;
+    color: #ffffff;
+}
+
+.category-card::before {
+    background: #2563eb;
+}
+
+.location-info {
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #1f2937
+    );
+}
+
+.location-filter select:focus {
+    border-color: #2563eb;
+}
+
+.property-card:hover,
+.house-card:hover,
+.car-card:hover,
+.building-card:hover,
+.category-card:hover {
+    border-color: #dbeafe;
+}
+
+footer {
+    background: #111827;
+    border-top: 2px solid #2563eb;
+}
+
+footer a {
+    color: #60a5fa;
+}
+/* =========================================
+   PROFESSIONAL BLUE SIDE LINE
+========================================= */
+
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 5px;
+    height: 100vh;
+
+    background: #2563eb;
+
+    z-index: 9999;
+}
+/* =========================================
+   PREMIUM BLUE SIDE ACCENT
+========================================= */
+
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100vh;
+
+    background: linear-gradient(
+        to bottom,
+        #60a5fa,
+        #2563eb,
+        #1d4ed8
+    );
+
+    box-shadow: 2px 0 10px rgba(37, 99, 235, 0.25);
+
+    z-index: 9999;
+}
+/* =========================================
+   BLUE LINE ON EVERY SECTION
+========================================= */
+
+section {
+    position: relative;
+    border-left: 4px solid #2563eb;
+    margin-bottom: 20px;
+}
+/* =========================================
+   PREMIUM BLUE LINE ON EVERY SECTION
+========================================= */
+
+section {
+    position: relative;
+    border-left: 4px solid #2563eb;
+    margin-bottom: 25px;
+    padding-left: 30px;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 25px;
+    width: 4px;
+    height: 70px;
+
+    background: #60a5fa;
+    border-radius: 0 5px 5px 0;
+}
